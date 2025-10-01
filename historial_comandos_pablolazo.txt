@@ -1,0 +1,38 @@
+sudo apt update
+sudo apt install git -y
+ssh-keygen -t ed25519 -C "pablolazo@github.com
+
+
+
+
+ssh-keygen -t ed25519 -C "pablolazo@github.com"
+
+
+
+
+ssh-keygen -t ed25519 -C "pablolazo@github.com
+ssh-keygen -t ed25519 -C "pablolazo.o@github.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+cd
+mkdir -p repogit
+cd repogit
+git clone git@github.com:pablolazo/TP_AySO.git
+cd TP_AySO
+git config --global user.name "pablo lazo"
+git config --global user.email "pablolazo.o@hotmail.com"
+git config --list
+echo "usuario=$(whoami)" > datos_usuario.txt
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "add: datos de usuario y cpu"
+git push
+cat <<EOF >> README.md
+alumno: pablo lazo
+division: div315  turno: noche
+EOF
+
+git add README.md
+git commit -m "add: datos de alumno en readme"
+git push
+history -a
